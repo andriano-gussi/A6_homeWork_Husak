@@ -70,8 +70,18 @@
         <h2>Вы нашли 10 зелёных квадратов за <span id="total-time-played"></span> секунд</h2>
         <h3>Количество промахов: <span id="total-missed"></span></h3>
         <h3>Количество набранных очков: <span id="total-score"></span></h3>
+        <h3>Уровень Вашей меткости, <span id="total-accuracy"></span>%:</h3>
+        <div class="progress col-6 mt-2 mb-5 pl-0 pr-0">
+            <div
+              id="my-progress-bar"
+              class="progress-bar" 
+              role="progressbar" 
+              style="width: 0%">
+            </div>
+        </div>
+
       </div>
-      <div class="row">
+      <div class="row mt-3 ml-1">
         <button id="button-start" class="btn btn-primary mr-3">Старт!</button>
         <button id="button-reload" class="btn btn-primary">Играть заново</button>
       </div>

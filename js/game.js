@@ -36,6 +36,15 @@ function endGame() {
   $("#total-time-played").text(totalPlayedSeconds);
   $("#total-missed").text(missed);
   $("#total-score").text(maxHits - missed);
+  
+  //функция управления прогрессбаром
+  const setBarWidth = (arg) =>
+    $('#my-progress-bar').attr('style', `width: ${arg}%`);  
+  //вычисление уровня меткости и передача результата на экран
+  let accuracy = Math.round((maxHits - missed) * 100 / maxHits);// % попаданий
+  if (accuracy < 0) {accuracy = 0;}//при отрицательном значении теряется смысл
+  $("#total-accuracy").text(accuracy);
+  setBarWidth(accuracy);
 
   $("#win-message").removeClass("d-none");
 }
